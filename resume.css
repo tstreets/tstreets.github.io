@@ -1,0 +1,57 @@
+@import url(./default-resume.css);
+
+html body {
+  font-size: 12px;
+}
+
+html body header {
+  background-color: #3c586f;
+  color: #fff;
+  padding: 2rem;
+  column-gap: 4rem;
+}
+
+html body header h1,
+html body header h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+html body header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+html body .about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+html body section.history {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  column-gap: 4rem;
+}
+
+html body section.history h3,
+html body section.history h4 {
+  margin-top: 0;
+}
+
+html body .history h3 {
+  text-decoration: underline 3px solid #3c586f;
+}
+
+html body .history a {
+  color: #000 !important;
+}
+
+html body header .contact a {
+  color: white;
+}
+
+html body header section h3 {
+  text-decoration: underline 3px solid #fff;
+}
