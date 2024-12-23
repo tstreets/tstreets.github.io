@@ -24,13 +24,13 @@ p {
   margin-bottom: 16px;
 }
 
-nav {
+nav:not(#mobile-nav) {
   height: 50px;
   background-color: #3c586f;
   color: #fff;
 }
 
-nav ul {
+nav:not(#mobile-nav) ul {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -44,9 +44,14 @@ nav ul li {
   list-style: none;
 }
 
-nav ul li:first-child {
+nav:not(#mobile-nav) ul li:first-child {
   width: 20%;
   font-size: 24px;
+}
+
+nav:not(#mobile-nav) ul li#mobile-menu-button {
+  display: none;
+  font-size: 40px;
 }
 
 nav ul li a {
@@ -60,7 +65,52 @@ nav ul li a.active {
   text-underline-offset: 5px;
 }
 
-nav ul li a:hover:not(.active) {
+nav ul li > a:hover:not(.active) {
   text-decoration: underline 3px wavy #fff;
   text-underline-offset: 5px;
+}
+
+main#home button {
+  padding: 4px;
+}
+
+nav#mobile-nav ul {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: 80vh;
+  width: 100%;
+  background-color: #fff;
+}
+
+nav#mobile-nav ul li {
+  border: 1px solid #000;
+  padding: 16px 4px;
+  background-color: #3c586f;
+  color: #fff;
+}
+
+nav#mobile-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 14px calc(100vw - 10px) 14px 10px;
+}
+
+@media (max-width: 767px) {
+  nav#mobile-nav.open ul {
+    display: block;
+  }
+
+  nav:not(#mobile-nav) ul li:not(:first-child) {
+    display: none;
+  }
+
+  nav:not(#mobile-nav) ul li#mobile-menu-button {
+    display: block;
+  }
+
+  nav:not(#mobile-nav) ul li:first-child {
+    width: 80%;
+  }
 }
