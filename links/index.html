@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ty Streets Portfolio - Links</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/icon.min.css"
+    />
+    <link rel="stylesheet" href="../css/links.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <b>
+            <a href="../">Ty Streets</a>
+          </b>
+        </li>
+        <li>
+          <a href="../">Home</a>
+        </li>
+        <li><a href="../about">About</a></li>
+        <li>
+          <a href="../resume">Resume</a>
+        </li>
+        <li><a href="../contact">Contact</a></li>
+        <li id="mobile-menu-button">
+          <i class="bars icon"></i>
+        </li>
+      </ul>
+    </nav>
+
+    <nav id="mobile-nav">
+      <ul>
+        <li>
+          <a href="../">Home</a>
+        </li>
+        <li>
+          <a href="../about">About</a>
+        </li>
+        <li>
+          <a href="../resume">Resume</a>
+        </li>
+        <li><a href="../contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      document.querySelector("#mobile-menu-button").onclick = function () {
+        document.querySelector("#mobile-nav").classList.toggle("open");
+      };
+
+      document.querySelector("#mobile-nav").onclick = function () {
+        document.querySelector("#mobile-nav").classList.toggle("open");
+      };
+    </script>
+
+    <main>
+      <ul>
+        <li>
+          <a href="https://tstreets.github.io" style="display: flex">
+            <i class="folder icon"></i>
+            <h4>Portfolio</h4>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://tstreets.github.io/files/TyStreets_CV.pdf"
+            style="display: flex"
+          >
+            <i class="file alternate icon"></i>
+            <h4>Resume</h4>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/tstreets" style="display: flex">
+            <i class="github icon"></i>
+            <h4>GitHub</h4>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/ty-streets-5314a8179"
+            style="display: flex"
+          >
+            <i class="linkedin icon"></i>
+            <h4>LinkedIn</h4>
+          </a>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
