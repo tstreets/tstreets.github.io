@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ty Streets Portfolio - LinkedIn</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <b>
+            <a href="../">Ty Streets</a>
+          </b>
+        </li>
+        <li>
+          <a href="../" class="active">Home</a>
+        </li>
+        <li><a href="../about">About</a></li>
+        <li>
+          <a href="../resume">Resume</a>
+        </li>
+        <li><a href="../contact">Contact</a></li>
+        <li id="mobile-menu-button">
+          <i>=</i>
+        </li>
+      </ul>
+    </nav>
+
+    <nav id="mobile-nav">
+      <ul>
+        <li>
+          <a href="../" class="active">Home</a>
+        </li>
+        <li>
+          <a href="../about">About</a>
+        </li>
+        <li>
+          <a href="../resume">Resume</a>
+        </li>
+        <li><a href="../contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      document.querySelector("#mobile-menu-button").onclick = function () {
+        document.querySelector("#mobile-nav").classList.toggle("open");
+      };
+
+      document.querySelector("#mobile-nav").onclick = function () {
+        document.querySelector("#mobile-nav").classList.toggle("open");
+      };
+    </script>
+  </body>
+</html>
