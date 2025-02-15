@@ -1,39 +1,41 @@
-.history ul {
+html body > ul {
   margin-bottom: 16px;
+}
+
+html body ul {
   padding-left: 2em;
 }
-
-html body header h1,
-html body header h3 {
-  margin-top: 0;
-  color: #3c586f;
+html body li {
+  margin-bottom: 0;
 }
 
-html body section.history {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 4rem;
+* {
+  margin: 0 !important;
 }
 
-html body section.history h3,
-html body section.history h4 {
-  margin-top: 0;
+html,
+body {
+  height: 100%;
 }
 
-html body .history h3 {
-  text-decoration: underline 3px solid #3c586f;
-  text-underline-offset: 5px;
+html body {
+  font-size: 12px;
 }
 
-html body .history a {
-  color: #000 !important;
+.details h2 {
+  text-decoration: underline;
+  margin-bottom: 4px !important;
+  margin-top: 12px !important;
 }
 
-html body header .contact a {
-  color: white;
+.details h4 {
+  margin-bottom: 4px !important;
 }
 
-html body header section h3 {
-  text-decoration: underline 3px solid #fff;
-  text-underline-offset: 5px;
+.details h4 i {
+  font-weight: 400;
+}
+
+.details ul {
+  margin-bottom: 8px !important;
 }
