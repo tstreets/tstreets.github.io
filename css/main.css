@@ -127,9 +127,12 @@ main {
     width: 300px;
     border-radius: 50%;
 
+    background-image: url("/files/profile.jpg");
+    background-size: cover;
+    background-position: center 25%;
+
     img {
-      margin-left: -50px;
-      margin-top: -50px;
+      display: none;
     }
   }
 }
