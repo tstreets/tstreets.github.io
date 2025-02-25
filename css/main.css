@@ -142,6 +142,10 @@ main {
   .intro {
     grid-template-columns: 1fr; /* Stacks image and text */
     text-align: center; /* Centers text */
+
+    p {
+      text-align: left; /* Centers text */
+    }
   }
 }
 
@@ -163,11 +167,11 @@ main {
   section:nth-child(odd):not(:first-child) {
     margin-top: 25%;
   }
+}
 
-  section {
-    ul li {
-      margin-left: 2rem;
-    }
+section {
+  ul li {
+    margin-left: 2rem;
   }
 }
 
