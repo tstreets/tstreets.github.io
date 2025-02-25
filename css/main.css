@@ -11,7 +11,9 @@ body {
 }
 
 html body main {
-  padding: 2rem;
+  padding: 80px 32px 32px 32px;
+  display: grid;
+  gap: 40px;
 }
 
 h1,
@@ -29,22 +31,21 @@ body {
 }
 
 nav {
-  padding: 10px 20px;
   background-color: #002657;
 
   &#mobile-nav ul {
     display: none;
     position: fixed;
-    top: 50px;
+    top: 70px;
     left: 0;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     background-color: #fff;
 
-    ul li {
+    li {
       border: 1px solid #000;
       padding: 16px 4px;
-      background-color: #3c586f;
+      background-color: #002657;
       color: #fff;
 
       a {
@@ -55,37 +56,49 @@ nav {
     }
   }
 
-  ul {
-    height: 50px;
-    list-style: none;
+  &:not(#mobile-nav) {
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
 
-    display: flex;
-    gap: 40px;
-    align-items: center;
+    ul {
+      height: 50px;
+      list-style: none;
 
-    li a {
-      text-decoration: none;
-      font-size: 20px;
-      color: white;
+      display: flex;
+      gap: 40px;
+      align-items: center;
 
-      &.active {
-        text-decoration: underline 3px solid white;
-        text-underline-offset: 5px;
+      li a {
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+
+        &.active {
+          text-decoration: underline 3px solid white;
+          text-underline-offset: 5px;
+        }
+
+        &:hover:not(.active) {
+          text-decoration: underline 3px wavy white;
+          text-underline-offset: 5px;
+        }
       }
 
-      &:hover:not(.active) {
-        text-decoration: underline 3px wavy white;
-        text-underline-offset: 5px;
+      li:first-child {
+        width: 70%;
+
+        a {
+          font-size: 24px;
+          font-weight: bold;
+        }
       }
     }
 
-    li:first-child {
-      width: 70%;
-
-      a {
-        font-size: 24px;
-        font-weight: bold;
-      }
+    li#mobile-menu-button {
+      display: none;
+      color: white;
+      font-size: 60px;
     }
   }
 }
@@ -106,12 +119,6 @@ nav {
   nav:not(#mobile-nav) ul li:first-child {
     width: 80%;
   }
-}
-
-main {
-  padding: 20px;
-  display: grid;
-  gap: 40px;
 }
 
 .intro {

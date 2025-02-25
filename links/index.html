@@ -9,7 +9,42 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/icon.min.css"
     />
-    <!-- <link rel="stylesheet" href="../css/links.css" /> -->
+    <style>
+      main ul {
+        margin-bottom: 16px;
+        padding-left: 2em;
+      }
+
+      main ul li {
+        list-style: none;
+        border: 2px solid #002657;
+        padding: 8px 4px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: #002657;
+
+          a {
+            color: white;
+          }
+        }
+      }
+
+      main ul li a {
+        color: #002657;
+        font-size: 40px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 8px;
+      }
+
+      main ul li a h4 {
+        margin-bottom: 0;
+      }
+    </style>
   </head>
   <body>
     <nav>
