@@ -156,23 +156,40 @@ nav {
 }
 
 #journey {
-  /*   background-color: lightblue; */
-
   display: grid;
-  grid-template-columns: 1fr 50px 1fr;
-  gap: 30px;
-  justify-content: center;
+  grid-template-columns: 1fr 10px 1fr;
+  gap: 10px;
+}
 
-  .divider {
-    height: 100%;
-    width: 5px;
-    border: 3px solid black;
-    grid-row: span 3;
-  }
+#journey .divider {
+  grid-row: span 6;
+  width: 100%;
+  background-color: black;
+}
 
-  section:nth-child(odd):not(:first-child) {
-    margin-top: 25%;
-  }
+#journey .role {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+#journey .role.active {
+  background-color: lightgrey;
+}
+
+#journey > section {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+#journey > section.left {
+  gap: 200px;
+}
+
+#journey .right {
+  /*   padding-top: 100px; */
+  margin-top: 200px;
 }
 
 @media (max-width: 768px) {
