@@ -98,7 +98,9 @@
       </section>
 
       <section class="contact-form">
-        <h2>Send a Message</h2>
+        <h2>
+          Send a Message <i><span class="message"></span></i>
+        </h2>
         <form
           action="https://class-api-six.vercel.app/api/portfolio/sendemail"
           method="POST"
@@ -120,10 +122,13 @@
       <script>
         let formSubmitting = false;
         const contactBtn = document.querySelector("#contact-submit");
+        const msgText = document.querySelector(".message");
 
         document.querySelector(".contact-form form").onsubmit = function (e) {
           e.preventDefault();
           if (!formSubmitting) {
+            msgText.innerHTML = "(Sending)";
+            msgText.style.color = "blue";
             formSubmitting = true;
             contactBtn.disabled = "true";
 
@@ -137,8 +142,14 @@
               }),
             })
               .then((r) => r.json())
-              .then((r) => this.reset())
+              .then((r) => {
+                msgText.style.color = "green";
+                msgText.innerHTML = "(Message Sent)";
+                this.reset();
+              })
               .catch((e) => {
+                msgText.style.color = "red";
+                msgText.innerHTML = "(Message Failed)";
                 console.error(e);
               })
               .finally(() => {
