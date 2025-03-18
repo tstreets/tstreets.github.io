@@ -113,28 +113,39 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="4" required></textarea>
 
-          <button type="submit">Send Message</button>
+          <button id="contact-submit" type="submit">Send Message</button>
         </form>
       </section>
 
       <script>
+        let formSubmitting = false;
+        const contactBtn = document.querySelector("#contact-submit");
+
         document.querySelector(".contact-form form").onsubmit = function (e) {
           e.preventDefault();
+          if (!formSubmitting) {
+            formSubmitting = true;
+            contactBtn.disabled = "true";
 
-          fetch(`https://class-api-six.vercel.app/api/portfolio/sendemail`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              name: document.querySelector("#name").value,
-              email: document.querySelector("#email").value,
-              message: document.querySelector("#message").value,
-            }),
-          })
-            .then((r) => r.json())
-            .then((r) => this.reset())
-            .catch((e) => {
-              console.error(e);
-            });
+            fetch(`https://class-api-six.vercel.app/api/portfolio/sendemail`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                name: document.querySelector("#name").value,
+                email: document.querySelector("#email").value,
+                message: document.querySelector("#message").value,
+              }),
+            })
+              .then((r) => r.json())
+              .then((r) => this.reset())
+              .catch((e) => {
+                console.error(e);
+              })
+              .finally(() => {
+                formSubmitting = false;
+                contactBtn.disabled = "";
+              });
+          }
         };
       </script>
 
