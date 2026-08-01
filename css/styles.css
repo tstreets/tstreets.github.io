@@ -1,0 +1,483 @@
+/* 
+    #F8FAFC - off white :: site background
+    #ABD2FA - light blue :: alt site background 
+    #091540 - deep navy :: main navigation background
+    #1B2CC1 - persian blue :: primary button background
+    #091540 :: primary button hover background
+    #3D518C :: secondary button border
+    #3D518C :: secondary button text
+    #ABD2FA :: card border
+    #7692FF :: card hover border
+    #F59E0B :: accent
+    #091540 :: heading text
+    #334155 :: body text
+    #64748B :: muted text
+
+*/
+
+body {
+    background-color: #F8FAFC;
+    color: #334155;
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #091540;
+}
+
+.bg-navy {
+    background-color: #091540;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    transition: transform 0.3s ease;
+}
+
+.navbar.nav-hidden {
+    transform: translateY(-100%);
+}
+
+/* ── Hero ── */
+.hero {
+    min-height: 92vh;
+    background: linear-gradient(135deg, #091540 0%, #1B2CC1 100%);
+    color: #F8FAFC;
+    padding: 5rem 0;
+}
+
+@media (max-width: 991px) {
+    .hero {
+        min-height: auto;
+        padding: 3.5rem 0 4rem;
+        text-align: center;
+    }
+
+    .hero-tagline {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-headshot {
+        width: 220px;
+        margin-bottom: 0.5rem;
+    }
+
+    /* center the CTA row on mobile */
+    .hero .btn-primary-brand,
+    .hero .btn-outline-brand {
+        display: inline-block;
+    }
+}
+
+.hero-eyebrow {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ABD2FA;
+    margin-bottom: 1rem;
+}
+
+.hero-name {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 800;
+    color: #F8FAFC;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+}
+
+.hero-tagline {
+    font-size: 1.25rem;
+    color: #ABD2FA;
+    max-width: 480px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-headshot {
+    width: 340px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 4px solid rgba(171, 210, 250, 0.4);
+    box-shadow: 0 0 0 8px rgba(171, 210, 250, 0.12);
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-position: top;
+}
+
+.btn-primary-brand {
+    background-color: #F59E0B;
+    border-color: #F59E0B;
+    color: #091540;
+    font-weight: 700;
+    padding: 0.65rem 1.5rem;
+    border-radius: 6px;
+}
+
+.btn-primary-brand:hover {
+    background-color: #D97706;
+    border-color: #D97706;
+    color: #091540;
+}
+
+.btn-outline-brand {
+    border: 2px solid #ABD2FA;
+    color: #ABD2FA;
+    font-weight: 600;
+    padding: 0.65rem 1.5rem;
+    border-radius: 6px;
+    background: transparent;
+}
+
+.btn-outline-brand:hover {
+    background-color: rgba(171, 210, 250, 0.15);
+    color: #F8FAFC;
+}
+
+/* ── Sections ── */
+.content-section {
+    padding: 5rem 0;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1B2CC1;
+    margin-bottom: 0.75rem;
+}
+
+/* ── Stat / feature grid ── */
+.stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.stat-card {
+    background: #fff;
+    border: 1.5px solid #ABD2FA;
+    border-radius: 10px;
+    padding: 1.25rem 1rem;
+    transition: border-color 0.2s;
+}
+
+.stat-card:hover {
+    border-color: #7692FF;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.stat-card p {
+    font-size: 0.875rem;
+    color: #64748B;
+    margin: 0;
+}
+
+/* ── Philosophy ── */
+.philosophy-section {
+    background-color: #F1F5F9;
+}
+
+.philosophy-card {
+    background: #fff;
+    border-left: 4px solid #F59E0B;
+    border-radius: 8px;
+    padding: 1.75rem 1.5rem;
+    height: 100%;
+}
+
+.philosophy-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.philosophy-card p {
+    font-size: 0.925rem;
+    color: #64748B;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ── Career Journey ── */
+.journey-section {
+    background-color: #F1F5F9;
+}
+
+.section-intro {
+    color: #64748B;
+    max-width: 560px;
+    margin-bottom: 0;
+}
+
+.journey-track {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: relative;
+    margin-top: 3rem;
+}
+
+/* horizontal connecting line */
+.journey-track::before {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 2px;
+    background: #ABD2FA;
+    z-index: 0;
+}
+
+.journey-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+.journey-node {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #1B2CC1;
+    border: 3px solid #F1F5F9;
+    box-shadow: 0 0 0 2px #1B2CC1;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.25rem;
+    flex-shrink: 0;
+}
+
+.journey-node--current {
+    background: #F59E0B;
+    box-shadow: 0 0 0 2px #F59E0B;
+    width: 28px;
+    height: 28px;
+    margin-top: -2px;
+}
+
+.journey-step--current .journey-content {
+    background: #fff;
+    border: 1.5px solid #F59E0B;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.journey-age {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748B;
+    margin-bottom: 0.25rem;
+}
+
+.journey-step h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.journey-theme {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #F59E0B;
+    margin-bottom: 0.35rem;
+}
+
+.journey-step p {
+    font-size: 0.8rem;
+    color: #64748B;
+    font-style: italic;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .journey-track {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .journey-track::before {
+        display: none;
+    }
+
+    .journey-step {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .journey-node {
+        margin-bottom: 0;
+        margin-top: 0.2rem;
+    }
+
+    .journey-step--current .journey-content {
+        flex: 1;
+    }
+}
+
+/* ── Experience ── */
+.exp-entry {
+    border-left: 3px solid #ABD2FA;
+    padding-left: 1.25rem;
+    margin-bottom: 2rem;
+    transition: border-color 0.2s;
+}
+
+.exp-entry:hover {
+    border-left-color: #F59E0B;
+}
+
+.exp-entry h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.exp-company {
+    display: block;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #F59E0B;
+    margin-bottom: 0.6rem;
+}
+
+.exp-entry p {
+    font-size: 0.9rem;
+    color: #64748B;
+    margin: 0;
+    line-height: 1.65;
+}
+
+/* ── Impact panel ── */
+.impact-panel {
+    background: #F8FAFC;
+    border-radius: 12px;
+    border: 1.5px solid #ABD2FA;
+    padding: 1.75rem;
+    height: 100%;
+}
+
+.impact-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #E2E8F0;
+    margin-bottom: 1.25rem;
+}
+
+.impact-entry {
+    margin-bottom: 1.25rem;
+}
+
+.impact-entry:last-child {
+    margin-bottom: 0;
+}
+
+.impact-entry h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #F59E0B;
+    margin-bottom: 0.3rem;
+}
+
+.impact-entry h4 span {
+    font-weight: 400;
+    color: #64748B;
+}
+
+.impact-entry p {
+    font-size: 0.85rem;
+    color: #64748B;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ── Education ── */
+.edu-entry {
+    border-left: 3px solid #ABD2FA;
+    padding-left: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.edu-school {
+    display: block;
+    font-size: 0.78rem;
+    color: #64748B;
+    margin-bottom: 0.25rem;
+}
+
+.edu-entry h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.edu-meta {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #F59E0B;
+}
+
+/* ── Skills ── */
+.skills-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: #fff;
+    border: 1.5px solid #ABD2FA;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #334155;
+    padding: 0.3rem 0.85rem;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.skill-tag:hover {
+    border-color: #7692FF;
+    color: #1B2CC1;
+}
+
+/* ── Footer ── */
+.site-footer {
+    background-color: #091540;
+    color: #64748B;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.875rem;
+}

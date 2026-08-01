@@ -1,0 +1,114 @@
+/* ── Portfolio-themed resume overrides ── */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* background-color: #F8FAFC; */
+    color: #334155;
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 0 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ── Name banner: stretch past body padding with negative margins ── */
+h1 {
+    background-color: #091540;
+    color: #F8FAFC;
+    text-align: center;
+    padding: 2rem 2.5rem 0.6rem;
+    margin: 0 -2.5rem;
+    border-bottom: none;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+/* contact line — same banner background */
+h1+p {
+    background-color: #091540;
+    color: #ABD2FA;
+    text-align: center;
+    padding: 0.2rem 2.5rem 1.75rem;
+    margin: 0 -2.5rem 2rem;
+    font-size: 0.82rem;
+}
+
+h1+p a {
+    color: #ABD2FA;
+}
+
+/* hide the hr immediately after the contact line */
+h1+p+hr {
+    display: none;
+}
+
+/* ── Section headings ── */
+h2 {
+    color: #091540;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid #F59E0B;
+    padding-bottom: 0.35rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.65rem;
+}
+
+/* ── Company / role paragraphs ── */
+p {
+    margin: 0 0 0.4rem;
+}
+
+/* company name = first <strong> in a paragraph */
+p>strong:first-child {
+    color: #091540;
+}
+
+/* role title = second <strong> in the same paragraph */
+p>strong~strong {
+    color: #1B2CC1;
+    display: inline;
+}
+
+/* date ranges */
+p em {
+    color: #64748B;
+    font-size: 0.8rem;
+}
+
+/* ── Section dividers between company blocks ── */
+hr {
+    border: none;
+    border-top: 1px solid #E2E8F0;
+    margin: 1rem 0;
+}
+
+/* ── Bullet lists ── */
+ul {
+    margin: 0.3rem 0 0.6rem;
+    padding-left: 1.4rem;
+}
+
+li {
+    margin-bottom: 0.25rem;
+    color: #334155;
+    line-height: 1.5;
+}
+
+li strong {
+    color: #091540;
+}
+
+/* ── Links ── */
+a {
+    color: #1B2CC1;
+    text-decoration: none;
+}
